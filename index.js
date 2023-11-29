@@ -4,7 +4,7 @@ let app = express(); //creates object (express website)
 
 let path = require("path");
 
-const port = 3000;
+const port = process.env.PORT || 3000; // "process.env.PORT" tells node.js when it is starting to look for environment variable (set up in op system or linux op system if deployed) that is called PORT to specify which port the application should run on. If there is no port it will use 3000.
 
 app.set("view engine", "ejs"); // could use pug. ejs is more popular. for insertion of data straight into html
 
@@ -21,4 +21,4 @@ const knex = require("knex")({
     }
 })
 
-app.listen(port, () => console.log("Listening on Port 3000"))
+app.listen(port, () => console.log("Website has started listening"))
