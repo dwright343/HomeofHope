@@ -23,12 +23,17 @@ const knex = require("knex")({ // connection to the database in a variable calle
     }
 })
 
-// this has to go here almost at the end
+// this kind of code (app.get and app.post) has to go here almost at the end
 app.get("/", (req, res) => {
-    knex.select().from("country").then( country => {
-        res.render("displayCountry", { mycountry : country}); // res.render method from express. now we're using files with .ejs extension instead of files with .html extension. "mycountry" is key/parameter. "country" is a list of all records returned from the select statement.
-    })
-})
+    res.sendFile(path.join(__dirname + '/views/LandingPage/index.html'));
+});
+
+
+// app.get("/", (req, res) => {
+//     knex.select().from("country").then( country => {
+//         res.render("displayCountry", { mycountry : country}); // res.render method from express. now we're using files with .ejs extension instead of files with .html extension. "mycountry" is key/parameter. "country" is a list of all records returned from the select statement.
+//     })
+// })
 
 // app.post("/", (req, res) => {
 //     knex.select().from("country").then( country => {
