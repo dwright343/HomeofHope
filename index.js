@@ -6,26 +6,24 @@ let path = require("path"); // imports path module to make it easier to find fil
 
 const port = process.env.PORT || 3000; // "process.env.PORT" tells node.js when it is starting to look for environment variable (set up in op system or linux op system if deployed) that is called PORT to specify which port the application should run on. If there is no port it will use 3000.
 
-app.set("view engine", "ejs"); // could use pug. ejs is more popular. for insertion of data straight into html
+//app.set("view engine", "ejs"); // could use pug. ejs is more popular. for insertion of data straight into html
 
 app.use(express.urlencoded({extended: true})); // parse data out of objects. pulling data out of forms.
 
-
-
-const knex = require("knex")({ // connection to the database in a variable called knex. 
-    client: "pg", 
-    connection: {
-        host: process.env.RDS_HOSTNAME || "localhost", //put whatever aws says
-        user: process.env.RDS_USERNAME || "postgres", //put whatever aws says
-        password: process.env.RDS_PASSWORD || "SuperUser123",
-        database: process.env.DB_NAME || "nepal",
-        port: process.env.RDS_PORT || 5432 //put whatever aws says
-    }
-})
+// const knex = require("knex")({ // connection to the database in a variable called knex. 
+//     client: "pg", 
+//     connection: {
+//         host: process.env.RDS_HOSTNAME || "localhost", //put whatever aws says
+//         user: process.env.RDS_USERNAME || "postgres", //put whatever aws says
+//         password: process.env.RDS_PASSWORD || "SuperUser123",
+//         database: process.env.DB_NAME || "nepal",
+//         port: process.env.RDS_PORT || 5432 //put whatever aws says
+//     }
+// })
 
 // this kind of code (app.get and app.post) has to go here almost at the end
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname + '/views/LandingPage/index.html'));
+    res.sendFile(path.join(__dirname + "/views/LandingPage/index.html"));
 });
 
 
