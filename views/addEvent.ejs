@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/addEvent" method="POST">
+        <fieldset>
+            <label for="EventName">Enter Event Name</label>
+            <input type="text" name="EventName" id="EventName">
+            <br><br>
+            <label for="EventDescription">Enter Event Description</label>
+            <textarea id="EventDescription" name="EventDescription" rows="5" cols ="30" maxlength="256"></textarea>
+            <br><br>
+            <label for="StartDate">Start Date</label>
+            <input type="date" id="StartDate" name="StartDate">
+            <br><br>
+            <label for="StartTime">Start Time</label>
+            <input type="time" id="StartTime" name="StartTime">
+            <br><br>
+            <label for="EndDate">End Date</label>
+            <input type="date" id="EndDate" name="EndDate">
+            <br><br>
+            <label for="EndTime">End Time</label>
+            <input type="time" id="EndTime" name="EndTime">
+        </fieldset>
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>

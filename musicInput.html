@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/storeMusic" method="POST">
+        <fieldset style="width: 0px;">
+            <br>
+            <legend>Band Info</legend>
+                <label for="bandName">Band Name</label>
+                <input type="text" name="bandName" id="bandName">
+                <br><br>
+                <label for="favSong">Favorite Song</label>
+                <input type="text" name="favSong" id="favSong">
+                <br><br>
+                <select name="musicGenre" id="musicGenre">
+                    <option value="country">Country</option>
+                    <option value="punk">Punk</option>
+                    <option value="rap">Rap</option>
+                    <option value="rock">Rock</option>
+                </select>
+                <br>
+        </fieldset>
+        <br>
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>

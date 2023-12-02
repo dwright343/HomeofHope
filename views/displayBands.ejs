@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for=""><br>My Music<br></label>
+    <br><br>
+    <% for (let iCount = 0; iCount < bands.length; iCount++) { %> 
+        <label><%= bands[iCount].band_name %>'s lead singer is <%= bands[iCount].lead_singer%></label>
+        <br>
+        <label>My favorite song is <%= bands[iCount].favorite_song%></label>
+        <br><br>
+    <% } %>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/editEvent" method="POST">
+        <fieldset style="width: 0px;">
+            <legend>Edit an Event</legend>
+            <input type="hidden" id="EventID" name="EventID" value="<%= myevent[0].EventID %>">
+            
+            <label for="EventName">Event Name</label>
+            <input type="text" id="EventName" name="EventName" value="<%= myevent[0].EventName %>">
+            <br><br>
+            <label for="EventDescription">Event Description</label>
+            <textarea id="EventDescription" name="EventDescription" value="<%= myevent[0].EventDescription %>" rows="5" cols ="30" maxlength="256"></textarea>
+            <br><br>
+            <label for="StartDate">Start Date</label>
+            <input type="date" id="StartDate" name="StartDate" value="<%= myevent[0].StartDate %>">
+            <br><br>
+            <label for="StartTime">Start Time</label>
+            <input type="time" id="StartTime" name="StartTime" value="<%= myevent[0].StartTime %>">
+            <br><br>
+            <label for="EndDate">End Date</label>
+            <input type="date" id="EndDate" name="EndDate" value="<%= myevent[0].EndDate %>">
+            <br><br>
+            <label for="EndTime">End Time</label>
+            <input type="time" id="EndTime" name="EndTime" value="<%= myevent[0].EndTime %>">
+        </fieldset>
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>
